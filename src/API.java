@@ -2,12 +2,18 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
+
+import com.eclipsesource.json.Json;
+import com.eclipsesource.json.JsonObject;
+import com.eclipsesource.json.JsonValue;
+import com.google.gson.Gson;
 public class API {
 
     public HttpURLConnection getConn() {
 
 
         try {
+            String api_key = "mSVIr9rR4Ll0ULABxITnZbFnJkWeNJqkGoQgXS0H";
             URL url = new URL("api.nasa.gov/insight_weather/?api_key=mSVIr9rR4Ll0ULABxITnZbFnJkWeNJqkGoQgXS0H&feedtype=json&ver=1.0\n");
 
             HttpURLConnection conn = null;
@@ -53,6 +59,4 @@ public class API {
         }
         return null;
     }
-
 }
-
