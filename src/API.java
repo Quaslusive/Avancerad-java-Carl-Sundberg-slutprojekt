@@ -1,6 +1,5 @@
 import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 public class API {
@@ -10,9 +9,10 @@ public class API {
 
 
     private HttpURLConnection connection;
-    // Get the response code t.ex 400, 404, 200 är ok
     int responseCode = connection.getResponseCode();
 
-    public API() throws IOException {
+    public API(HttpURLConnection connection) throws IOException {
+
+        this.connection = connection;
     }
 }
