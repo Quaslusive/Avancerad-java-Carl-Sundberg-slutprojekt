@@ -21,7 +21,7 @@ public class WeatherOnMars extends JFrame {
         // Deklarerar dagens datum och början av veckan
         LocalDate today = LocalDate.now();
         LocalDate startOfWeek = today.with(DayOfWeek.MONDAY);
-        
+
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd LLLL");
         String formattedToday = today.format(formatter);
 
