@@ -10,7 +10,7 @@ Skriven av Carl Sundberg
 public class WeatherOnMars extends JFrame {
 
     private final JTextArea[] dayTexts = new JTextArea[7];
-    JLabel[] solLabels = new JLabel[7];
+    JLabel[] solLabels = new JLabel[3];
 
     WeatherOnMars() {
 
