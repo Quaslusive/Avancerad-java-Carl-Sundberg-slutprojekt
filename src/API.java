@@ -1,10 +1,10 @@
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.*;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
 
 public class API {
 
@@ -79,7 +79,7 @@ public class API {
             }
 
         }
-        System.out.println(responseContent.toString());
+        // System.out.println(responseContent.toString());
         connection.disconnect();
 
         /*
@@ -87,7 +87,7 @@ public class API {
         JSONArray dataCollection = new JSONArray(responsBody);
         for (int i = 0; i < dataCollection.length(); i++) {
             JSONObject data = dataCollection.getJSONObject(i);
-            int sol_keys = data.getInt("sol");
+            int currentSol_keys = data.getInt("sol");
             int AT = data.getInt("atmosphericTemperature");
             int HWS = data.getInt("horizontal wind speed");
             int PRE = data.getInt("atmospheric Pressure");
